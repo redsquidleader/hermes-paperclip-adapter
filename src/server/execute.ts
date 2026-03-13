@@ -278,6 +278,7 @@ export async function execute(
 
   if (worktreeMode) args.push("-w");
   if (checkpoints) args.push("--checkpoints");
+  if (cfgBoolean(config.verbose) === true) args.push("-v");
 
   // Session resume
   const prevSessionId = cfgString(
